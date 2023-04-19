@@ -1,0 +1,65 @@
+{
+  "blocks": {
+    "btn": [],
+    "cookie-popup": [],
+    "embed-responsive": [],
+    "field-actions": [],
+    "field-checkbox": [],
+    "field-text": [],
+    "form": [],
+    "lang-switcher": [],
+    "logo": [],
+    "page": [],
+    "page-footer": [],
+    "page-header": [],
+    "scroll-link": [],
+    "sprite-svg": [],
+    "typo": [],
+    "hero": [],
+    "map-link": [],
+    "view-slider": [],
+    "meeting-subject": [],
+    "guest-expert": [],
+    "workshop": [],
+    "giveaway": [],
+    "gallery": [],
+    "feedback-form": [],
+    "social-links": [],
+    "copyrights": []
+  },
+  "addCssBefore": [
+    "../../node_modules/bootstrap/scss/_functions",
+    "../../node_modules/bootstrap/scss/_variables",
+    "../../node_modules/bootstrap/scss/_mixins",
+    "./src/scss/variables.scss",
+    "./src/scss/mixins.scss",
+    "../../node_modules/bootstrap/scss/_dropdown",
+    "../../node_modules/@fancyapps/ui/dist/fancybox.css",
+    "../../node_modules/swiper/swiper-bundle.css"
+  ],
+  "addCssAfter": [
+    "./src/scss/print.scss"
+  ],
+  "singleCompiled": [],
+  "addJsBefore": [
+    "./node_modules/focus-visible/dist/focus-visible.min.js",
+    "./node_modules/svg4everybody/dist/svg4everybody.js",
+    "./node_modules/autosize/dist/autosize.min.js",
+    "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+    "./node_modules/@fancyapps/ui/dist/fancybox.umd.js",
+    "./node_modules/swiper/swiper-bundle.min.js"
+  ],
+  "addJsAfter": [
+    "./src/js/global-script.js"
+  ],
+  "addImages": [
+    "./src/img/*.{jpg,jpeg,gif,png,svg,ico,webp}"
+  ],
+  "copiedCss": [],
+  "copiedJs": [],
+  "dirs": {
+    "srcPath": "./src/",
+    "buildPath": "./build/",
+    "blocksDirName": "blocks"
+  }
+}

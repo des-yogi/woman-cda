@@ -1,0 +1,29 @@
+<!--DEV
+@ @include('blocks/page-header/page-header.html')
+-->
+
+<header class="container  page-header">
+  <div class="page-header__inner">
+    <a href="index.html" class="logo">
+      <img src="img/woman-cad-logo.svg" alt="Woman Can Do All logo" width="254" height="128">
+    </a>
+
+    <div class="page-header__service">
+      <a href="tel:+35799751875" class="page-header__link"><span>+357 99 751875</span></a>
+
+      <div class="dropdown  lang-switcher">
+        <button class="btn  btn--icon  btn--outline" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,5" title="Вибір мови">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe"></use></svg>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end  lang-switcher__menu">
+          <li class="lang-switcher__item  active"><a>Рус</a></li>
+          <li class="lang-switcher__item"><a href="#">Укр</a></li>
+          <li class="lang-switcher__item"><a href="#">Англ</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <a href="#" class="btn  btn--cta"><span>Записаться</span></a>
+  </div>
+</header>
