@@ -1,2 +1,1 @@
-# woman-cda
-LP
+# Woman Can Do All LP
