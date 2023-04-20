@@ -1,14 +1,213 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/hero/hero.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="hero">content</div>
-
 -->
+
+<section class="container  hero">
+
+  <div class="hero__text">
+    <h1 class="hero__title">
+      <span>Business</span> завтраки <br>в Ларнаке
+      <span class="hero__script">с Натальей Эллинас</span>
+    </h1>
+
+    <div class="hero__photo">
+      <picture>
+        <source srcset="img/natalia-ellinas-dt@1x.webp,
+                        img/natalia-ellinas-dt@2x.webp 2x"
+                media="(min-width: 768px)" type="image/webp">
+        <source srcset="img/natalia-ellinas-dt@1x.jpg,
+                        img/natalia-ellinas-dt@2x.jpg 2x"
+                media="(min-width: 768px)">
+                <!-- 485x726, 970x1452 2x  -->
+        <source srcset="img/natalia-ellinas@1x.webp,
+                        img/natalia-ellinas@2x.webp 2x"
+                media="(min-width: 360px)" type="image/webp">
+        <source srcset="img/natalia-ellinas@1x.jpg,
+                        img/natalia-ellinas@2x.jpg 2x"
+                media="(min-width: 360px)">
+                <!-- 328x491, 656x982 2x  -->
+        <img src="img/natalia-ellinas-dt@2x.jpg" alt="Наталья Эллинас" width="970" height="1452">
+      </picture>
+    </div>
+
+    <div class="hero__info">
+      <p class="hero__data-detail">
+        <span class="hero__info-question">📍 Где встретимся?</span>
+        <span class="hero__datetime">
+          <time class="hero__date" datetime="2023-05-05">5 Мая</time>
+          <time class="hero__time" datetime="09:30">в 9:30</time>
+        </span>
+      </p>
+      <p class="hero__location">
+        Ресторан FILINI в Radisson <br>Larnaka Beach Resort Hotel
+      </p>
+      <p class="hero__location-descr">Прекрасный завтрак & просекко от Filini Restaurant, фоторепортаж ивента, подарки каждой гостье, розыгрыши призов И МНОГОЕ ДРУГОЕ ❤️‍🔥</p>
+    </div>
+  </div>
+
+  <div class="row  hero__media-wrapper">
+    <div class="hero__map-link-col">
+      <section  class="map-link"
+                style="background-image: url('/img/map-bg.webp')"
+                data-bg="/img/map-bg.jpg"
+                data-bg-webp="/img/map-bg.webp">
+        <h2 class="map-link__title">Ресторан FILINI в Radisson Larnaka Beach Resort Hotel</h2>
+        <p class="map-link__address">📍 Dhekelia Rd, Larnaca 7041, Кипр</p>
+        <a href="https://goo.gl/maps/4ZWUTcjHagMMB2Zq9" class="btn" target="_blank" rel="nofollow noopener">
+          <span>Показать на карте</span>
+        </a>
+      </section>
+    </div>
+
+    <div class="hero__view-slider-col">
+      <section class="view-slider">
+        <h2 class="visually-hidden">Виды отеля</h2>
+
+        <div class="swiper  view-slider__container">
+
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide  view-slider__slide">
+              <a href="img/view-2400x1600@2x.jpg" data-fancybox="gallery" data-caption="Слайд 1" class="embed-responsive embed-responsive--3-2  view-slider__img" title="Слайд 1">
+                <picture>
+                  <source srcset="img/view-1200x800.webp,
+                                  img/view-2400x1600@2x.webp 2x"
+                          media="(min-width: 1280px)" type="image/webp">
+                  <source srcset="img/view-1200x800.jpg,
+                                  img/view-2400x1600@2x.jpg 2x"
+                          media="(min-width: 1280px)">
+                    <!-- 792x528, 1584x1056 2x -->
+                  <source srcset="img/view-1200x800.webp,
+                                  img/view-2400x1600@2x.webp 2x"
+                          media="(min-width: 1024px)" type="image/webp">
+                  <source srcset="img/view-1200x800.jpg,
+                                  img/view-2400x1600@2x.jpg 2x"
+                          media="(min-width: 1024px)">
+                    <!-- 1200x800, 2400x1600 2x -->
+                  <source srcset="img/view-1200x800.webp,
+                                  img/view-2400x1600@2x.webp 2x"
+                          media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/view-1200x800.jpg,
+                                  img/view-2400x1600@2x.jpg 2x"
+                          media="(min-width: 768px)">
+                    <!-- 944x629, 1888x1258 2x -->
+                  <source srcset="img/view-1200x800.webp,
+                                  img/view-2400x1600@2x.webp 2x"
+                          media="(min-width: 480px)" type="image/webp">
+                  <source srcset="img/view-1200x800.jpg,
+                                  img/view-2400x1600@2x.jpg 2x"
+                          media="(min-width: 480px)">
+                    <!-- 688x458, 1376x916 2x -->
+                  <source srcset="img/view-1200x800.webp,
+                                  img/view-2400x1600@2x.webp 2x"
+                          media="(min-width: 360px)" type="image/webp">
+                  <source srcset="img/view-1200x800.jpg,
+                                  img/view-2400x1600@2x.jpg 2x"
+                          media="(min-width: 360px)">
+                    <!-- 450x300, 900x600 2x -->
+                  <img src="img/view-2400x1600@2x.jpg" alt="Слайд 1" width="2400" height="1600" loading="lazy">
+                </picture>
+              </a>
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            </div>
+
+            <div class="swiper-slide  view-slider__slide">
+              <a href="img/view-2400x1600@2x.jpg" data-fancybox="gallery" data-caption="Слайд 2" class="embed-responsive embed-responsive--3-2  view-slider__img" title="Слайд 2">
+                <picture>
+                  <source srcset="img/view-1200x800.webp,
+                                  img/view-2400x1600@2x.webp 2x"
+                          media="(min-width: 1280px)" type="image/webp">
+                  <source srcset="img/view-1200x800.jpg,
+                                  img/view-2400x1600@2x.jpg 2x"
+                          media="(min-width: 1280px)">
+                    <!-- 792x528, 1584x1056 2x -->
+                  <source srcset="img/view-1200x800.webp,
+                                  img/view-2400x1600@2x.webp 2x"
+                          media="(min-width: 1024px)" type="image/webp">
+                  <source srcset="img/view-1200x800.jpg,
+                                  img/view-2400x1600@2x.jpg 2x"
+                          media="(min-width: 1024px)">
+                    <!-- 1200x800, 2400x1600 2x -->
+                  <source srcset="img/view-1200x800.webp,
+                                  img/view-2400x1600@2x.webp 2x"
+                          media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/view-1200x800.jpg,
+                                  img/view-2400x1600@2x.jpg 2x"
+                          media="(min-width: 768px)">
+                    <!-- 944x629, 1888x1258 2x -->
+                  <source srcset="img/view-1200x800.webp,
+                                  img/view-2400x1600@2x.webp 2x"
+                          media="(min-width: 480px)" type="image/webp">
+                  <source srcset="img/view-1200x800.jpg,
+                                  img/view-2400x1600@2x.jpg 2x"
+                          media="(min-width: 480px)">
+                    <!-- 688x458, 1376x916 2x -->
+                  <source srcset="img/view-1200x800.webp,
+                                  img/view-2400x1600@2x.webp 2x"
+                          media="(min-width: 360px)" type="image/webp">
+                  <source srcset="img/view-1200x800.jpg,
+                                  img/view-2400x1600@2x.jpg 2x"
+                          media="(min-width: 360px)">
+                    <!-- 450x300, 900x600 2x -->
+                  <img src="img/view-2400x1600@2x.jpg" alt="Слайд 1" width="2400" height="1600" loading="lazy">
+                </picture>
+              </a>
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            </div>
+
+            <div class="swiper-slide  view-slider__slide">
+              <a href="img/view-2400x1600@2x.jpg" data-fancybox="gallery" data-caption="Слайд 3" class="embed-responsive embed-responsive--3-2  view-slider__img" title="Слайд 3">
+                <picture>
+                  <source srcset="img/view-1200x800.webp,
+                                  img/view-2400x1600@2x.webp 2x"
+                          media="(min-width: 1280px)" type="image/webp">
+                  <source srcset="img/view-1200x800.jpg,
+                                  img/view-2400x1600@2x.jpg 2x"
+                          media="(min-width: 1280px)">
+                    <!-- 792x528, 1584x1056 2x -->
+                  <source srcset="img/view-1200x800.webp,
+                                  img/view-2400x1600@2x.webp 2x"
+                          media="(min-width: 1024px)" type="image/webp">
+                  <source srcset="img/view-1200x800.jpg,
+                                  img/view-2400x1600@2x.jpg 2x"
+                          media="(min-width: 1024px)">
+                    <!-- 1200x800, 2400x1600 2x -->
+                  <source srcset="img/view-1200x800.webp,
+                                  img/view-2400x1600@2x.webp 2x"
+                          media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/view-1200x800.jpg,
+                                  img/view-2400x1600@2x.jpg 2x"
+                          media="(min-width: 768px)">
+                    <!-- 944x629, 1888x1258 2x -->
+                  <source srcset="img/view-1200x800.webp,
+                                  img/view-2400x1600@2x.webp 2x"
+                          media="(min-width: 480px)" type="image/webp">
+                  <source srcset="img/view-1200x800.jpg,
+                                  img/view-2400x1600@2x.jpg 2x"
+                          media="(min-width: 480px)">
+                    <!-- 688x458, 1376x916 2x -->
+                  <source srcset="img/view-1200x800.webp,
+                                  img/view-2400x1600@2x.webp 2x"
+                          media="(min-width: 360px)" type="image/webp">
+                  <source srcset="img/view-1200x800.jpg,
+                                  img/view-2400x1600@2x.jpg 2x"
+                          media="(min-width: 360px)">
+                    <!-- 450x300, 900x600 2x -->
+                  <img src="img/view-2400x1600@2x.jpg" alt="Слайд 1" width="2400" height="1600" loading="lazy">
+                </picture>
+              </a>
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            </div>
+
+          </div>
+
+          <div class="slider-controls">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</section>

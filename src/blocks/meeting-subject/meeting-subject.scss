@@ -1,9 +1,51 @@
-// В этом файле должны быть стили для БЭМ-блока meeting-subject, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .meeting-subject {
+  padding-top: 72px;
+  padding-bottom: 120px;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 72px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 96px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+    margin-top: 0;
+
+    span:not(.meeting-subject__script) {
+      color: $main-color;
+    }
+  }
+
+  &__script {
+    display: block;
+    margin-bottom: 8px;
+    font-family: $font-family--script;
+    font-weight: 400;
+  }
+
+  &__intro {
+    font-size: $font-size-lg;
+  }
+
+  ul {
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0 48px;
+    }
+  }
+
+  li {
+
+    @media (min-width: $screen-xl) {
+      flex: 1 1;
+      flex-basis: calc(50% - 48px);
+    }
+  }
 }

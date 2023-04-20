@@ -17,10 +17,38 @@
 
       <main role="main">
 
-        <div class="container">
+        @@include('blocks/hero/hero.html')
 
+        <section class="container  meeting-subject">
+          <h2 class="meeting-subject__title">
+            <span class="meeting-subject__script">Тема встречи</span>
+            <span>Восхищай, вдохновляй, влияй!</span>
+          </h2>
+          <div class="meeting-subject__intro">
+            <p>Вы хорошо знаете, что успех и удача мчатся навстречу харизматичным и обаятельным личностям!</p>
+            <p>Как же зажечь в себе эту лампочку харизмы, чтобы усилить свой личный магнетизм и достичь лучших результатов в любой сфере жизни?</p>
+          </div>
 
-        </div>
+          <p style="font-size:24px; font-weight:700;">Эти секреты мы с Вами раскроем <span style="color:#DD2074;">5 мая</span></p>
+
+          <p style="font-weight: 700;">У нас в плане:</p>
+          <ul>
+            <li>Три точки опоры харизматичного поведения.</li>
+            <li>Три точки опоры харизматичного поведения.</li>
+            <li>Как работают над собой профессионалы.</li>
+            <li>Секреты самых харизматичных звезд.</li>
+            <li>Инструменты диагностики притягательности.</li>
+            <li>Включаем лампочку харизмы!</li>
+          </ul>
+        </section>
+
+        @@include('blocks/guest-expert/guest-expert.html')
+
+        @@include('blocks/workshop/workshop.html')
+
+        @@include('blocks/giveaway/giveaway.html')
+
+        @@include('blocks/gallery/gallery.html')
 
       </main>
 

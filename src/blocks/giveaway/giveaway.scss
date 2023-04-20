@@ -1,9 +1,45 @@
-// В этом файле должны быть стили для БЭМ-блока giveaway, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .giveaway {
+  padding-top: 72px;
+  padding-bottom: 30px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 96px;
+    padding-bottom: 0;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__text {
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      position: relative;
+      z-index: 1;
+      max-width: 50%;
+      text-align: initial;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__intro {
+    font-size: $font-size-lg;
+  }
+
+  &__img {
+    overflow: hidden;
+
+    @media (min-width: $screen-xl) {
+      position: relative;
+      margin-top: -170px;
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 }

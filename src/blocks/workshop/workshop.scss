@@ -1,9 +1,72 @@
-// В этом файле должны быть стили для БЭМ-блока workshop, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .workshop {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__inner {
+
+    @media (min-width: $screen-xl) {
+      align-items: center;
+    }
+  }
+
+  &__star-col {
+    @include col(xs, 12);
+    @include col(xl, 5);
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text-col {
+    @include col(xs, 12);
+    @include col(xl, 7);
+  }
+
+  &__star {
+    width: 270px;
+    height: 270px;
+    margin: 0 auto;
+
+    @media (min-width: $screen-md) {
+      margin-left: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 486px;
+      height: 486px;
+      margin: auto;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+
+    @media (min-width: $screen-xl) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    color: $main-color;
+  }
+
+  &__intro {
+    margin-bottom: 24px;
+    font-size: $font-size-lg;
+  }
 }

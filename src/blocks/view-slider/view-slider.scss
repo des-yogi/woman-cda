@@ -1,9 +1,14 @@
-// В этом файле должны быть стили для БЭМ-блока view-slider, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .view-slider {
 
   $block-name:                &; // #{$block-name}__element
 
+  &__img {
+    border-radius: $border-radius--lg;
+    cursor: zoom-in;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 }

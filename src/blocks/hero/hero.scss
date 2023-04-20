@@ -1,9 +1,151 @@
-// В этом файле должны быть стили для БЭМ-блока hero, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .hero {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__text {
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      position: relative;
+      text-align: initial;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+    text-transform: uppercase;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 64px;
+    }
+
+    span:not(.hero__script) {
+      color: $main-color;
+    }
+  }
+
+  &__script {
+    display: block;
+    margin-top: 16px;
+    font-size: 52px;
+    font-family: $font-family--script;
+    font-weight: 400;
+    text-transform: none;
+    color: $main-color;
+
+    @media (min-width: $screen-xl) {
+      font-size: 64px;
+    }
+  }
+
+  &__photo {
+    position: relative;
+    z-index: -1;
+    margin-top: -40px;
+
+    @media (min-width: $screen-md) {
+      margin-top: -60px;
+    }
+
+    @media (min-width: $screen-xl) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 30px;
+      text-align: right;
+    }
+
+    img {
+      width: 328px;
+      height: 491px;
+
+      @media (min-width: $screen-md) {
+        width: 485px;
+        height: 726px;
+      }
+    }
+  }
+
+  &__info {
+    margin-top: -40px;
+
+    @media (min-width: $screen-xl) {
+      max-width: 790px;
+      margin-top: 0;
+    }
+  }
+
+  &__info-question {
+    display: block;
+    margin-bottom: 16px;
+    font-size: $font-size-lg;
+    font-weight: 700;
+    color: $main-color;
+  }
+
+  &__datetime {
+    display: block;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 64px;
+    font-weight: 700;
+
+    @media (min-width: $screen-md) {
+      display: inline-block;
+      vertical-align: baseline;
+      margin-right: 16px;
+      margin-bottom: 0;
+    }
+
+    &:first-letter {
+      color: $main-color;
+    }
+  }
+
+  &__time {
+    font-family: $font-family--script;
+    font-size: 40px;
+    font-weight: 400;
+    color: $main-color;
+  }
+
+  &__location {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  &__location-descr {
+    font-size: $font-size-lg;
+  }
+
+  &__media-wrapper {
+    margin-top: 40px;
+  }
+
+  &__map-link-col {
+    @include col(xs, 12);
+    @include col(xl, 4);
+
+    @media (max-width: $screen-xl - 1) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__view-slider-col {
+    @include col(xs, 12);
+    @include col(xl, 8);
+  }
 }

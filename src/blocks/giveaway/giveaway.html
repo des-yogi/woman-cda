@@ -1,14 +1,40 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/giveaway/giveaway.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="giveaway">content</div>
-
 -->
+
+<section class="container  giveaway">
+  <div class="giveaway__text">
+    <h2 class="giveaway__title">Розыгрыши подарков</h2>
+    <p class="giveaway__intro">На мастер-классе вы можете участвовать в розыгрышах наших любимых партнеров и спонсоров мероприятия, а именно от:</p>
+  </div>
+  <div class="giveaway__img">
+    <picture>
+      <source srcset="img/gift-group.webp,
+                      img/gift-group.webp 2x" media="(min-width: 1280px)" type="image/webp">
+      <source srcset="img/gift-group.png,
+                      img/gift-group.png 2x" media="(min-width: 1280px)">
+      <!-- 1200x709, 2400x1418 2x -->
+      <source srcset="img/gift-group.webp,
+                      img/gift-group.webp 2x" media="(min-width: 1024px)" type="image/webp">
+      <source srcset="img/gift-group.png,
+                      img/gift-group.png 2x" media="(min-width: 1024px)">
+      <!-- 1120x662, 2240x1324 2x -->
+      <source srcset="img/gift-group.webp,
+                      img/gift-group.webp 2x" media="(min-width: 768px)" type="image/webp">
+      <source srcset="img/gift-group.png,
+                      img/gift-group.png 2x" media="(min-width: 768px)">
+      <!-- 944x558, 1888x1116 2x -->
+      <source srcset="img/gift-group.webp,
+                      img/gift-group.webp 2x" media="(min-width: 480px)" type="image/webp">
+      <source srcset="img/gift-group.png,
+                      img/gift-group.png 2x" media="(min-width: 480px)">
+      <!-- 688x406, 1376x812 2x -->
+      <source srcset="img/gift-group.webp,
+                      img/gift-group.webp 2x" media="(min-width: 360px)" type="image/webp">
+      <source srcset="img/gift-group.png,
+                      img/gift-group.png 2x" media="(min-width: 360px)">
+      <!-- 448x265, 896x530 2x -->
+      <img src="img/gift-group.png" width="1200" height="709" alt="Виды подарков" loading="lazy">
+    </picture>
+  </div>
+</section>

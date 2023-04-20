@@ -1,9 +1,64 @@
-// В этом файле должны быть стили для БЭМ-блока gallery, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .gallery {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__text {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      text-align: initial;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__title,
+  &__intro {
+
+    @media (min-width: $screen-xl) {
+      max-width: 790px;
+    }
+  }
+
+  &__intro {
+    font-size: $font-size-lg;
+  }
+
+  &__slide {
+    width: 212px;
+    height: 159px;
+    border-radius: $border-radius--lg;
+    overflow: hidden;
+
+    @media (min-width: $screen-lg) {
+      width: 384px;
+      height: 288px;
+    }
+  }
+
+  &__img {
+    overflow: hidden;
+    transition: transform $transition-time;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      cursor: zoom-in;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 }

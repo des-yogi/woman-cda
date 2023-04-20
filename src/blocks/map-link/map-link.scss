@@ -1,9 +1,48 @@
-// В этом файле должны быть стили для БЭМ-блока map-link, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .map-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  min-height: 400px;
+  height: 100%;
+  padding: 40px;
+  color: $white;
+  background-color: $gray-darker;
+  background-position: 42% 63%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  border-radius: $border-radius--lg;
+  overflow: hidden;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 54px;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(25, 26, 26, 0) 0%, #191A1A 100%);
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title,
+  &__address,
+  .btn {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $font-size-lg;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  &__address {
+    margin-bottom: 24px;
+  }
 }
