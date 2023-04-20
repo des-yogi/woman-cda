@@ -1,14 +1,136 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/gallery/gallery.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="gallery">content</div>
-
 -->
+
+<section class="gallery">
+  <div class="container  gallery__text">
+    <h2 class="gallery__title">Как это было</h2>
+    <p class="gallery__intro">Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating estimation and other evidence, Earth formed over 4.5 billion years ago.</p>
+  </div>
+
+  <div id="gallery-wrap" class="swiper  gallery__container">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide  gallery__slide">
+        <a href="img/slide-1.jpg" data-fancybox="gallery2" data-caption="Слайд 1" class="embed-responsive embed-responsive--4-3  gallery__img" title="Слайд 1">
+          <!-- 2400x1800 для большого фото -->
+          <picture>
+            <source srcset="img/slide-1.webp,
+                            img/slide-1.webp 2x" media="(min-width: 992px)" type="image/webp">
+            <source srcset="img/slide-1.jpg,
+                            img/slide-1.jpg 2x" media="(min-width: 992px)">
+            <!-- 384x288, 768x576 2x -->
+            <source srcset="img/slide-1.webp,
+                            img/slide-1.webp 2x" media="(min-width: 360px)" type="image/webp">
+            <source srcset="img/slide-1.jpg,
+                            img/slide-1.jpg 2x" media="(min-width: 360px)">
+            <!-- 212x159, 424x318 2x -->
+            <img src="img/slide-1.jpg" alt="Слайд 1" width="768" height="576" loading="lazy">
+          </picture>
+        </a>
+        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+      </div>
+
+      <div class="swiper-slide  gallery__slide">
+        <a href="img/slide-2.jpg" data-fancybox="gallery2" data-caption="Слайд 2" class="embed-responsive embed-responsive--4-3  gallery__img" title="Слайд 2">
+          <!-- 2400x1800 для большого фото -->
+          <picture>
+            <source srcset="img/slide-2.webp,
+                            img/slide-2.webp 2x" media="(min-width: 992px)" type="image/webp">
+            <source srcset="img/slide-2.jpg,
+                            img/slide-2.jpg 2x" media="(min-width: 992px)">
+            <!-- 384x288, 768x576 2x -->
+            <source srcset="img/slide-2.webp,
+                            img/slide-2.webp 2x" media="(min-width: 360px)" type="image/webp">
+            <source srcset="img/slide-2.jpg,
+                            img/slide-2.jpg 2x" media="(min-width: 360px)">
+            <!-- 212x159, 424x318 2x -->
+            <img src="img/slide-2.jpg" alt="Слайд 1" width="768" height="576" loading="lazy">
+          </picture>
+        </a>
+        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+      </div>
+
+      <div class="swiper-slide  gallery__slide">
+        <a href="img/slide-3.jpg" data-fancybox="gallery2" data-caption="Слайд 3" class="embed-responsive embed-responsive--4-3  gallery__img" title="Слайд 3">
+          <!-- 2400x1800 для большого фото -->
+          <picture>
+            <source srcset="img/slide-3.webp,
+                            img/slide-3.webp 2x" media="(min-width: 992px)" type="image/webp">
+            <source srcset="img/slide-3.jpg,
+                            img/slide-3.jpg 2x" media="(min-width: 992px)">
+            <!-- 384x288, 768x576 2x -->
+            <source srcset="img/slide-3.webp,
+                            img/slide-3.webp 2x" media="(min-width: 360px)" type="image/webp">
+            <source srcset="img/slide-3.jpg,
+                            img/slide-3.jpg 2x" media="(min-width: 360px)">
+            <!-- 212x159, 424x318 2x -->
+            <img src="img/slide-3.jpg" alt="Слайд 1" width="768" height="576" loading="lazy">
+          </picture>
+        </a>
+        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+      </div>
+
+      <div class="swiper-slide  gallery__slide">
+        <a href="img/slide-4.jpg" data-fancybox="gallery2" data-caption="Слайд 4" class="embed-responsive embed-responsive--4-3  gallery__img" title="Слайд 4">
+          <!-- 2400x1800 для большого фото -->
+          <picture>
+            <source srcset="img/slide-4.webp,
+                            img/slide-4.webp 2x" media="(min-width: 992px)" type="image/webp">
+            <source srcset="img/slide-4.jpg,
+                            img/slide-4.jpg 2x" media="(min-width: 992px)">
+            <!-- 384x288, 768x576 2x -->
+            <source srcset="img/slide-4.webp,
+                            img/slide-4.webp 2x" media="(min-width: 360px)" type="image/webp">
+            <source srcset="img/slide-4.jpg,
+                            img/slide-4.jpg 2x" media="(min-width: 360px)">
+            <!-- 212x159, 424x318 2x -->
+            <img src="img/slide-4.jpg" alt="Слайд 1" width="768" height="576" loading="lazy">
+          </picture>
+        </a>
+        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+      </div>
+
+      <div class="swiper-slide  gallery__slide">
+        <a href="img/slide-5.jpg" data-fancybox="gallery2" data-caption="Слайд 5" class="embed-responsive embed-responsive--4-3  gallery__img" title="Слайд 5">
+          <!-- 2400x1800 для большого фото -->
+          <picture>
+            <source srcset="img/slide-5.webp,
+                            img/slide-5.webp 2x" media="(min-width: 992px)" type="image/webp">
+            <source srcset="img/slide-5.jpg,
+                            img/slide-5.jpg 2x" media="(min-width: 992px)">
+            <!-- 384x288, 768x576 2x -->
+            <source srcset="img/slide-5.webp,
+                            img/slide-5.webp 2x" media="(min-width: 360px)" type="image/webp">
+            <source srcset="img/slide-5.jpg,
+                            img/slide-5.jpg 2x" media="(min-width: 360px)">
+            <!-- 212x159, 424x318 2x -->
+            <img src="img/slide-5.jpg" alt="Слайд 1" width="768" height="576" loading="lazy">
+          </picture>
+        </a>
+        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+      </div>
+
+      <div class="swiper-slide  gallery__slide">
+        <a href="img/slide-6.jpg" data-fancybox="gallery2" data-caption="Слайд 6" class="embed-responsive embed-responsive--4-3  gallery__img" title="Слайд 6">
+          <!-- 2400x1800 для большого фото -->
+          <picture>
+            <source srcset="img/slide-6.webp,
+                            img/slide-6.webp 2x" media="(min-width: 992px)" type="image/webp">
+            <source srcset="img/slide-6.jpg,
+                            img/slide-6.jpg 2x" media="(min-width: 992px)">
+            <!-- 384x288, 768x576 2x -->
+            <source srcset="img/slide-6.webp,
+                            img/slide-6.webp 2x" media="(min-width: 360px)" type="image/webp">
+            <source srcset="img/slide-6.jpg,
+                            img/slide-6.jpg 2x" media="(min-width: 360px)">
+            <!-- 212x159, 424x318 2x -->
+            <img src="img/slide-6.jpg" alt="Слайд 1" width="768" height="576" loading="lazy">
+          </picture>
+        </a>
+        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+      </div>
+
+    </div>
+  </div>
+</section>

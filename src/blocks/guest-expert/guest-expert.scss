@@ -1,9 +1,99 @@
-// В этом файле должны быть стили для БЭМ-блока guest-expert, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .guest-expert {
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 96px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__inner {
+    position: relative;
+    border-radius: $border-radius--lg;
+    background-color: $block-bg;
+
+    @media (min-width: $screen-md) {
+      padding: 0 24px 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 24px 40px 0 0;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: -65px;
+    right: -15px;
+    transform: rotate(8.6deg);
+    margin: 0;
+    width: 250px;
+    padding: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $pink;
+    border-radius: 12px;
+
+    @media (min-width: $screen-md) {
+      top: -37px;
+    }
+
+    @media (min-width: $screen-xl) {
+      top: -25px;
+    }
+  }
+
+  &__img {
+    width: 264px;
+    height: 352px;
+    margin: 0 auto;
+
+    @media (min-width: $screen-md) {
+      width: 300px;
+      height: 400px;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex: 0 0;
+      flex-basis: 384px;
+      width: 384px;
+      height: 512px;
+      margin-left: 0;
+      margin-right: 24px;
+    }
+
+    img {
+      object-fit: contain;
+      object-position: center bottom;
+    }
+  }
+
+  &__text {
+    padding-top: 40px;
+    background-color: $body-bg;
+
+    @media (min-width: $screen-md) {
+      padding: 40px;
+      border-radius: $border-radius--lg;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex: 1 1 auto;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+  }
+
+  &__intro {
+    font-size: $font-size-lg;
+    font-weight: 500;
+  }
 }

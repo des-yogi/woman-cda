@@ -1,14 +1,38 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/workshop/workshop.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="workshop">content</div>
-
 -->
+
+<section class="container  workshop">
+  <div class="row  workshop__inner">
+    <div class="workshop__star-col">
+      <div class="embed-responsive embed-responsive--1-1  workshop__star">
+        <picture>
+          <source srcset="img/stars.webp" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/stars.png" media="(min-width: 1280px)">
+            <!-- 486x486 -->
+          <source srcset="img/stars.webp" media="(min-width: 360px)" type="image/webp">
+          <source srcset="img/stars.png" media="(min-width: 360px)">
+            <!-- 270x270 -->
+          <img src="img/stars.png" alt="" width="486" height="486" loading="lazy">
+        </picture>
+      </div>
+    </div>
+    <div class="workshop__text-col">
+      <div class="workshop__text">
+        <h2 class="workshop__title">Мастер-класс</h2>
+        <p class="workshop__intro">
+          Мы предоставляем возможность углубленно изучить и внедрить в свою жизнь секрет нетворкинга!
+        </p>
+        <div class="workshop__content">
+          <p style="font-size: 20px; font-weight: 700;">В нашем плане:</p>
+          <ul>
+            <li>Вы получите ответы на свои вопросы</li>
+            <li>Вы усилите свои знания и навыки в сфере экологичного нетворкинга!</li>
+            <li>Вы поймете как и когда работает гравитация в коммуникации!</li>
+            <li>Вы овладеете техниками, которые помогут ярче восхищать, вдохновлять и влиять на свое окружение, открыв секреты успешных мировых звезд!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
