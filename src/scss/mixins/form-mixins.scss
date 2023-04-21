@@ -47,7 +47,8 @@
   padding-top: 0.4em;
   font-size: $font-size-sm;
   line-height: 1.2em;
-  color: $text-muted;
+  color: $white;
+  opacity: 0.8;
 
   &:empty { // stylelint-disable-line
     display: none;
@@ -57,7 +58,11 @@
 
 @mixin field-focus {
   outline: 0;
-  box-shadow: 0 0 0 2px rgba($color-main, $opacity);
+  box-shadow: 0 0 0 1px rgba($black, $opacity);
+
+  &::placeholder {
+    color: $black;
+  }
 }
 
 
@@ -65,5 +70,5 @@
   display: block;
   margin-bottom: 0.4em;
   line-height: $line-height;
-  font-weight: 700;
+  font-weight: 500;
 }
