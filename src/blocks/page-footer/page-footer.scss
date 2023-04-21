@@ -1,8 +1,77 @@
-// В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-footer {
+  padding-top: 40px;
+  padding-bottom: 24px;
+  color: $white;
+  background-color: $text-color;
 
   $block-name:                &; // #{$block-name}__element
+
+  &__logo-col {
+    @include col(xs, 12);
+    @include col(md, 4);
+    @include col(xl, 2);
+
+    @media (max-width: $screen-md - 1)  {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+  }
+
+  &__contacts-col {
+    @include col(xs, 12);
+    @include col(md, 8);
+    @include col(xl, 10);
+
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__slogan-col {
+    @include col(xs, 12);
+    @include col(xl, 7);
+
+    @media (min-width: $screen-md) {
+      margin-top: 40px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $screen-md) {
+      flex-direction: initial;
+      justify-content: flex-end;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: baseline;
+    padding: 8px 0;
+    color: inherit;
+    text-decoration: none !important;
+
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 24px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-right: 40px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $pink;
+    }
+  }
+
+  &__slogan {
+
+    @media (max-width: $screen-md - 1)  {
+      text-align: center;
+    }
+  }
 }

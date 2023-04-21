@@ -1,9 +1,141 @@
-// В этом файле должны быть стили для БЭМ-блока feedback-form, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .feedback-form {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-xl) {
+    //padding-top: 96px;
+    padding-bottom: 96px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__inner {
+    color: $white;
+    //background-color: $main-color;
+
+    @media (min-width: $screen-md) {
+      padding: 40px;
+      background-color: $main-color;
+      border-radius: $border-radius--lg;
+    }
+  }
+
+  &__row {
+    @include row(
+      $xs-grid-gutter:  32px,
+      $sm-grid-gutter:  32px,
+      $md-grid-gutter:  $grid-gutter-width,
+      $lg-grid-gutter:  $grid-gutter-width,
+      $xl-grid-gutter:  $grid-gutter-width,
+      $xxl-grid-gutter: $grid-gutter-width
+    );
+
+    @media (max-width: $screen-md - 1) {
+      padding-top: 40px;
+      //padding-bottom: 40px;
+      background-color: $main-color;
+      border-radius: $border-radius--lg;
+    }
+  }
+
+  &__info-col {
+    @include col(xs, 12, $grid-columns, 32px);
+    @include col-offset(xl, 1);
+    @include col(xl, 4);
+
+    @media (max-width: $screen-xl - 1) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__form-col {
+    @include col(xs, 12, $grid-columns, 32px);
+    @include col(xl, 6);
+
+    @media (max-width: $screen-md - 1) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: $maroon;
+      border-radius: $border-radius--lg;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__subtitle {
+    margin-top: 40px;
+    font-size: $font-size-lg;
+    font-weight: 700;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    & + & {
+      margin-top: 16px;
+    }
+  }
+
+  &__badge {
+    display: inline-block;
+    vertical-align: baseline;
+    padding: 2px 12px;
+    margin-top: 4px;
+    font-size: $font-size-lg;
+    font-weight: 500;
+    color: $main-color;
+    background-color: $white;
+    border-radius: $border-radius;
+  }
+
+  &__form {
+
+    @media (min-width: $screen-md) {
+      padding: 40px;
+      background-color: $maroon;
+      border-radius: $border-radius--lg;
+    }
+  }
+
+  &__agreement {
+    @include row(
+      $xs-grid-gutter:  32px,
+      $sm-grid-gutter:  32px,
+      $md-grid-gutter:  $grid-gutter-width,
+      $lg-grid-gutter:  $grid-gutter-width,
+      $xl-grid-gutter:  $grid-gutter-width,
+      $xxl-grid-gutter: $grid-gutter-width
+    );
+  }
+
+  &__agreement-col {
+    @include col(xs, 12, $grid-columns, 32px);
+    order: 1;
+  }
+
+  &__captcha-col {
+    @include col(xs, 12, $grid-columns, 32px);
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__submit-col {
+    @include col(xs, 12, $grid-columns, 32px);
+
+    @media (min-width: $screen-md) {
+      flex: 1 1 auto;
+      padding-left: 8px;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
 }

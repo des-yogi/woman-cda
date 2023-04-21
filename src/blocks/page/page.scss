@@ -283,7 +283,7 @@ a {
 * {
   //Firefox only
   /* «цвет ползунка» «цвет полосы скроллбара» */
-  scrollbar-color: $divider-color;
+  scrollbar-color: $gray-lighter;
   scrollbar-width: thin;  /* толщина */
 
   //for webkit browsers (Chrome, Opera, Safary, Edge ets.)
@@ -300,7 +300,7 @@ a {
   ::-webkit-scrollbar {
       width: 6px; /* ширина для вертикального скролла */
       height: 6px; /* высота для горизонтального скролла */
-      background-color: $divider-color;
+      background-color: $gray-lighter;
   }
 
   /* ползунок скроллбара */

@@ -3,7 +3,7 @@
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 
   &__title {
     display: block;
@@ -40,20 +40,24 @@
   }
 
   &__name-text {
-    color: $title-color;
+    display: inline-block;
+    vertical-align: baseline;
+    font-size: 16px;
+    color: $white !important;
 
     &::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
-      width: 22px;
-      height: 22px;
-      border: 1px solid $border-color;
-      border-radius: $border-radius / 2;
+      width: 24px;
+      height: 24px;
+      background-color: $white;
+      border: 1px solid $main-color;
+      border-radius: $border-radius / 4;
 
       @at-root input:checked ~ & {
-        background-color: $border-color;
+        background-color: $white;
       }
     }
 
@@ -64,8 +68,8 @@
     &::after {
       content: '';
       position: absolute;
-      top: 5px;
-      left: 5px;
+      top: 6px;
+      left: 6px;
       width: 12px;
       height: 8px;
       opacity: 0;
@@ -76,7 +80,17 @@
 
       @at-root input:checked ~ & {
         opacity: 1;
-        border-color: $white;
+        border-color: $main-color;
+      }
+    }
+
+    a {
+      color: inherit !important;
+      opacity: 0.9;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
       }
     }
   }

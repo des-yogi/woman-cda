@@ -1,14 +1,86 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/feedback-form/feedback-form.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="feedback-form">content</div>
-
 -->
+
+<article id="feedback" class="container  feedback-form">
+  <div class="feedback-form__inner">
+    <div class="feedback-form__row">
+
+      <div class="feedback-form__info-col">
+        <div class="feedback-form__info">
+          <h2 class="feedback-form__title">Заказать обратный звонок</h2>
+          <section>
+            <h3 class="feedback-form__subtitle">Стоимость участия:</h3>
+            <ul class="list-nostyled  feedback-form__price">
+              <li class="feedback-form__item">
+                5 мая ЗАВТРАК (с 9:30 до 13:00)
+                <span class="feedback-form__badge">70&thinsp;€</span>
+              </li>
+              <li class="feedback-form__item">
+                5 мая ЗАВТРАК (с 9:30 до 13:00)
+                <span class="feedback-form__badge">110&thinsp;€</span>
+              </li>
+              <li class="feedback-form__item">
+                5 мая ЗАВТРАК (с 9:30 до 13:00)
+                <span class="feedback-form__badge">155&thinsp;€</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <div class="feedback-form__form-col">
+        <form class="feedback-form__form" action="#" method="post">
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" id="af_name" name="name" value="" placeholder="Имя" required>
+              <span class="field-text__help-text error error_name"></span>
+            </span>
+          </label>
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="tel" id="af_tel" name="tel" value="" placeholder="Телефон" required>
+              <!-- <span class="field-text__help-text error error_tel">[[!+fi.error.tel]]</span> -->
+            </span>
+          </label>
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="email" id="af_email" name="email" value="" placeholder="E-mail" required>
+              <!-- <span class="field-text__help-text error error_email">[[!+fi.error.email]]</span> -->
+            </span>
+          </label>
+
+          <div class="feedback-form__agreement">
+            <div class="feedback-form__agreement-col">
+
+              <div class="field-checkbox" style="margin-bottom: 0;">
+                <label class="field-checkbox__name">
+                  <input class="field-checkbox__input" type="checkbox" name="agreement" value="" checked>
+                  <span class="field-checkbox__name-text">
+                    Я согласен на обработку персональных данных в соответствии с <a href="#">Политикой конфиденциальности</a>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="feedback-form__captcha-col" style="display:flex; justify-content:center;">
+              <img src="img/reCaptcha.gif" alt="" style="max-width: 300px;">
+            </div>
+
+            <div class="feedback-form__submit-col" style="margin-bottom: 24px;">
+              <div class="field-actions">
+                <button class="btn" type="submit"><span>Заказать</span></button>
+              </div>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</article>

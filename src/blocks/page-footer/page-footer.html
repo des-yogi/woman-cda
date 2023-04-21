@@ -1,11 +1,46 @@
 <!--DEV
-
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-footer/page-footer.html')
-
 -->
 
-<footer class="page-footer" role="contentinfo">
-  page-footer
+<footer class="container  page-footer">
+  <div class="row  page-footer__inner">
+
+    <div class="page-footer__logo-col">
+      <a href="index.html" class="logo  logo--footer" title="Woman Can Do All">
+        <img src="img/woman-cad-logo--footer.svg" alt="Woman Can Do All logo" width="174" height="88">
+      </a>
+    </div>
+
+    <div class="page-footer__contacts-col">
+      <section class="page-footer__contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+
+        <a href="tel:+35799751875" class="page-footer__link"><span>+357 99 751875</span></a>
+
+        @@include('../../blocks/social-links/social-links.html')
+      </section>
+    </div>
+
+    <div class="page-footer__slogan-col">
+      <p class="page-footer__slogan">Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating estimation and other evidence, Earth formed over 4.5 billion years ago.</p>
+    </div>
+
+  </div>
+
+  <section class="copyrights">
+
+    <p class="copyrights__owner">
+      <span class="copyrights__text">© Woman Can Do All. All rights reserved. </span>
+      <a href="#" class="copyrights__service-link">Terms of use</a>
+    </p>
+
+    <p class="copyrights__dev">
+      <span>Made with</span>
+      <svg width="15" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#heart"></use></svg>
+      <span>by</span>
+      <a href="https://itdoors.com.ua/" target="_blank" rel="nofollow noopener">IT-Doors</a>
+    </p>
+
+  </section>
+
 </footer>
