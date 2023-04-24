@@ -1,14 +1,53 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/faq/faq.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="faq">content</div>
-
 -->
+
+<section class="container  faq">
+  <div class="row">
+
+    <div class="faq__intro-col">
+      <h2 class="faq__title">FAQ</h2>
+      <p class="faq__intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus id aliquet convallis diam dictum euismod sed. Diam dignissim tincidunt amet, sapien, tincidunt aliquam elementum arcu. Id odio nunc consectetur pellentesque. Malesuada consequat sagittis, eu quis interdum maecenas sit.</p>
+    </div>
+
+    <div class="faq__main-col">
+      <div class="accordion  faq__inner" id="accordionFaq">
+
+        <article class="accordion-item  faq__item">
+          <h3 class="accordion-header  faq__item-title" id="faq-heading1">
+            <button class="accordion-button faq__btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse1" aria-expanded="true" aria-controls="faq-collapse1">
+              <span style="padding-right:20px;">Как можно приобрести билет?</span>
+            </button>
+          </h3>
+          <div id="faq-collapse1" class="accordion-collapse collapse show" aria-labelledby="faq-heading1" data-bs-parent="#accordionFaq" style="">
+            <div class="accordion-body  faq__body"><p>Вы можете приобрести билеты онлайн на нашем сайте, а также во всех магазинах Stefanidis</p></div>
+          </div>
+        </article>
+
+        <article class="accordion-item  faq__item">
+          <h3 class="accordion-header  faq__item-title" id="faq-heading2">
+            <button class="accordion-button faq__btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse2" aria-expanded="false" aria-controls="faq-collapse2">
+              <span style="padding-right:20px;">Могу ли я купить билет при входе на концертную площадку?</span>
+            </button>
+          </h3>
+          <div id="faq-collapse2" class="accordion-collapse collapse" aria-labelledby="faq-heading2" data-bs-parent="#accordionFaq" style="">
+            <div class="accordion-body  faq__body"><p>Покупка билетов при входе на концертную площадку возможна в случае, если билеты на концерт не распроданы полностью.</p></div>
+          </div>
+        </article>
+
+        <article class="accordion-item  faq__item">
+          <h3 class="accordion-header  faq__item-title" id="faq-heading3">
+            <button class="accordion-button collapsed  faq__btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse3" aria-expanded="false" aria-controls="faq-collapse3">
+              <span style="padding-right:20px;">Как сдать билет?</span>
+            </button>
+          </h3>
+          <div id="faq-collapse3" class="accordion-collapse collapse" aria-labelledby="faq-heading3" data-bs-parent="#accordionFaq">
+            <div class="accordion-body  faq__body"><p>Курированием процесса возврата билетов занимается конкретный билетный оператор в зависимости от мероприятия. Электронный адрес, на который необходимо подавать запрос, можно найти на приобретенном билете.</p></div>
+          </div>
+        </article>
+
+     </div>
+    </div>
+
+  </div>
+</section>

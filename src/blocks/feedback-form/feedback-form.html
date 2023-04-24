@@ -2,30 +2,60 @@
 @ @include('blocks/feedback-form/feedback-form.html')
 -->
 
-<article id="feedback" class="container  feedback-form">
-  <div class="feedback-form__inner">
+<div class="container  feedback-form">
+
+  <section class="price">
+    <h2 class="price__title">Стоимость участия</h2>
+
+    <div class="row  price__inner" role="list">
+
+      <div class="price__col" role="presentation">
+        <p class="price__item" role="listitem">
+          <span class="price__event-name">ЗАВТРАК</span>
+          <span class="price__event-date">
+            <time datetime="2023-05-05 09:30">5 мая</time>
+            (с <span>9:30</span> до <span>13:00</span>)
+          </span>
+          <span class="price__event-price">70&thinsp;€</span>
+        </p>
+      </div>
+
+      <div class="price__col" role="presentation">
+        <p class="price__item" role="listitem">
+          <span class="price__event-name">МАСТЕР КЛАСС</span>
+          <span class="price__event-date">
+            <time datetime="2023-05-05 09:30">6 мая</time>
+            (с <span>11:00</span> до <span>14:00</span>)
+          </span>
+          <span class="price__event-price">110&thinsp;€</span>
+        </p>
+      </div>
+
+      <div class="price__col" role="presentation">
+        <p class="price__item" role="listitem">
+          <span class="price__event-name">ЗАВТРАК + МК</span>
+          <span class="price__event-date">
+            <time datetime="2023-05-05">5 мая</time>
+            и
+            <time datetime="2023-05-06">6 мая</time>
+          </span>
+          <span class="price__event-price">155&thinsp;€</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="feedback" class="feedback-form__inner">
+    <h2 class="visually-hidden">Заказать обратный звонок</h2>
     <div class="feedback-form__row">
 
       <div class="feedback-form__info-col">
         <div class="feedback-form__info">
-          <h2 class="feedback-form__title">Заказать обратный звонок</h2>
-          <section>
-            <h3 class="feedback-form__subtitle">Стоимость участия:</h3>
-            <ul class="list-nostyled  feedback-form__price">
-              <li class="feedback-form__item">
-                5 мая ЗАВТРАК (с 9:30 до 13:00)
-                <span class="feedback-form__badge">70&thinsp;€</span>
-              </li>
-              <li class="feedback-form__item">
-                5 мая ЗАВТРАК (с 9:30 до 13:00)
-                <span class="feedback-form__badge">110&thinsp;€</span>
-              </li>
-              <li class="feedback-form__item">
-                5 мая ЗАВТРАК (с 9:30 до 13:00)
-                <span class="feedback-form__badge">155&thinsp;€</span>
-              </li>
-            </ul>
-          </section>
+          <p class="h2 feedback-form__title">Важно!</p>
+          <p>Места ограниченны.</p>
+          <p>Вход по списку. Бронирование мест по 100% предоплате.</p>
+          <p>Чтобы забронировать участие в Бизнес-завтраке "Woman Can Do All", необходимо заполнить форму и мы связемся с Вами в ближайшее время.</p>
         </div>
       </div>
 
@@ -43,13 +73,6 @@
             <span class="field-text__input-wrap">
               <input class="field-text__input" type="tel" id="af_tel" name="tel" value="" placeholder="Телефон" required>
               <!-- <span class="field-text__help-text error error_tel">[[!+fi.error.tel]]</span> -->
-            </span>
-          </label>
-
-          <label class="field-text">
-            <span class="field-text__input-wrap">
-              <input class="field-text__input" type="email" id="af_email" name="email" value="" placeholder="E-mail" required>
-              <!-- <span class="field-text__help-text error error_email">[[!+fi.error.email]]</span> -->
             </span>
           </label>
 
@@ -82,5 +105,5 @@
       </div>
 
     </div>
-  </div>
-</article>
+  </section>
+</div>

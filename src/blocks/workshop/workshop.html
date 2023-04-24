@@ -7,13 +7,15 @@
     <div class="workshop__star-col">
       <div class="embed-responsive embed-responsive--1-1  workshop__star">
         <picture>
-          <source srcset="img/stars.webp" media="(min-width: 1280px)" type="image/webp">
-          <source srcset="img/stars.png" media="(min-width: 1280px)">
-            <!-- 486x486 -->
-          <source srcset="img/stars.webp" media="(min-width: 360px)" type="image/webp">
-          <source srcset="img/stars.png" media="(min-width: 360px)">
-            <!-- 270x270 -->
-          <img src="img/stars.png" alt="" width="486" height="486" loading="lazy">
+          <source srcset="img/stars-180w.webp, img/stars-360w.webp 2x" media="(min-width: 1280px)" type="image/webp">
+          <source srcset="img/stars-180w.jpg, img/stars-360w.jpg 2x" media="(min-width: 1280px)">
+            <!-- 180x180, 360x360 2x -->
+          <source srcset="img/stars-95w.webp,
+                          img/stars-180w.webp 2x" media="(min-width: 360px)" type="image/webp">
+          <source srcset="img/stars-95w.jpg,
+                          img/stars-180w.jpg 2x" media="(min-width: 360px)">
+            <!-- 95x95, 180x180 2x -->
+          <img src="img/stars-360w.jpg" alt="" width="360" height="360" loading="lazy">
         </picture>
       </div>
     </div>

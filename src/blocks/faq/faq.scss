@@ -1,9 +1,101 @@
-// В этом файле должны быть стили для БЭМ-блока faq, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .faq {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__intro-col {
+    @include col(xs, 12);
+    @include col(xl, 4);
+
+    @media (max-width: $screen-xl - 1) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__main-col {
+    @include col(xs, 12);
+    @include col(xl, 8);
+  }
+
+  &__title {
+    margin-top: 0;
+   text-transform: uppercase;
+  }
+
+  &__item {
+
+    & + & {
+      margin-top: 16px;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+  }
+
+  &__btn {
+    position: relative;
+    width: 100%;
+    padding: 24px 64px 24px 24px;
+    font-family: $font-family;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: initial;
+    line-height: 1.3em;
+    color: inherit;
+    background-color: $block-bg;
+    border-radius: $border-radius;
+    border: none;
+    cursor: pointer;
+    transition: color $transition-time;
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+    }
+
+    &::after,
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 2px;
+      top: 50%;
+      right: 24px;
+      background-color: $main-color;
+    }
+
+    &::after {
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      transform: translateY(-50%) rotate(-90deg);
+      transition: transform $transition-time;
+    }
+
+    &[aria-expanded=true] {
+      //color: $main-color;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      &::before {
+        transform: translateY(-50%) rotate(-180deg); // -180
+      }
+    }
+  }
+
+  &__body {
+    padding: 0 24px 24px;
+    background-color: $block-bg;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
 }
