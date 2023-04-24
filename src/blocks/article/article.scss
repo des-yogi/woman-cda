@@ -1,0 +1,17 @@
+.article {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner-col {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 8);
+  }
+}

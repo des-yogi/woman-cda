@@ -25,7 +25,11 @@
     "gallery": [],
     "feedback-form": [],
     "social-links": [],
-    "copyrights": []
+    "copyrights": [],
+    "faq": [],
+    "price": [],
+    "page-404": [],
+    "article": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
