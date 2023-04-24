@@ -36,13 +36,19 @@
 <noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
   <div class="page__inner">
     <div class="page__content">
-      <header class="container  page-header">
+      <header class="container  page-header  page-header--sticky">
         <div class="page-header__inner">
-          <a href="index.html" class="logo" title="Woman Can Do All">
-            <img src="img/woman-cad-logo.svg" alt="Woman Can Do All logo" width="254" height="128">
-          </a>
+          <div class="page-header__logo-wrapper">
+            <a href="index.html" class="logo" title="Woman Can Do All">
+              <img src="img/woman-cad-logo.svg" alt="Woman Can Do All logo" width="254" height="128">
+            </a>
+            <span class="page-header__slogan">Это женская территория</span>
+          </div>
           <div class="page-header__service">
-            <a href="tel:+35799751875" class="page-header__link"><span>+357 99 751875</span></a>
+            <!-- <a href="tel:+35799751875" class="page-header__link"><span>+357 99 751875</span></a> -->
+            <a href="#feedback" class="btn  btn--cta  page-header__btn" data-scroll-link>
+              <span>Заказать обратный звонок</span>
+            </a>
             <div class="dropdown  lang-switcher">
               <button class="btn  btn--icon  btn--outline" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,5" title="Вибір мови">
                 <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe"/></svg>
@@ -54,7 +60,6 @@
               </ul>
             </div>
           </div>
-          <a href="#feedback" class="btn  btn--cta" data-scroll-link><span>Записаться</span></a>
         </div>
       </header>
       <main>
@@ -284,13 +289,15 @@
             <div class="workshop__star-col">
               <div class="embed-responsive embed-responsive--1-1  workshop__star">
                 <picture>
-                  <source srcset="img/stars.webp" media="(min-width: 1280px)" type="image/webp">
-                  <source srcset="img/stars.png" media="(min-width: 1280px)">
-                    <!-- 486x486 -->
-                  <source srcset="img/stars.webp" media="(min-width: 360px)" type="image/webp">
-                  <source srcset="img/stars.png" media="(min-width: 360px)">
-                    <!-- 270x270 -->
-                  <img src="img/stars.png" alt width="486" height="486" loading="lazy">
+                  <source srcset="img/stars-180w.webp, img/stars-360w.webp 2x" media="(min-width: 1280px)" type="image/webp">
+                  <source srcset="img/stars-180w.jpg, img/stars-360w.jpg 2x" media="(min-width: 1280px)">
+                    <!-- 180x180, 360x360 2x -->
+                  <source srcset="img/stars-95w.webp,
+                                  img/stars-180w.webp 2x" media="(min-width: 360px)" type="image/webp">
+                  <source srcset="img/stars-95w.jpg,
+                                  img/stars-180w.jpg 2x" media="(min-width: 360px)">
+                    <!-- 95x95, 180x180 2x -->
+                  <img src="img/stars-360w.jpg" alt width="360" height="360" loading="lazy">
                 </picture>
               </div>
             </div>
@@ -313,9 +320,6 @@
             </div>
           </div>
         </section>
-        <!--DEV
-        @ @include('blocks/giveaway/giveaway.html')
-        -->
         <section class="container  giveaway">
           <div class="giveaway__text">
             <h2 class="giveaway__title">Розыгрыши подарков</h2>
@@ -352,9 +356,48 @@
             </picture>
           </div>
         </section>
-        <!--DEV
-        @ @include('blocks/gallery/gallery.html')
-        -->
+        <section class="container  faq">
+          <div class="row">
+            <div class="faq__intro-col">
+              <h2 class="faq__title">FAQ</h2>
+              <p class="faq__intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus id aliquet convallis diam dictum euismod sed. Diam dignissim tincidunt amet, sapien, tincidunt aliquam elementum arcu. Id odio nunc consectetur pellentesque. Malesuada consequat sagittis, eu quis interdum maecenas sit.</p>
+            </div>
+            <div class="faq__main-col">
+              <div class="accordion  faq__inner" id="accordionFaq">
+                <article class="accordion-item  faq__item">
+                  <h3 class="accordion-header  faq__item-title" id="faq-heading1">
+                    <button class="accordion-button faq__btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse1" aria-expanded="true" aria-controls="faq-collapse1">
+                      <span style="padding-right:20px;">Как можно приобрести билет?</span>
+                    </button>
+                  </h3>
+                  <div id="faq-collapse1" class="accordion-collapse collapse show" aria-labelledby="faq-heading1" data-bs-parent="#accordionFaq" style>
+                    <div class="accordion-body  faq__body"><p>Вы можете приобрести билеты онлайн на нашем сайте, а также во всех магазинах Stefanidis</p></div>
+                  </div>
+                </article>
+                <article class="accordion-item  faq__item">
+                  <h3 class="accordion-header  faq__item-title" id="faq-heading2">
+                    <button class="accordion-button faq__btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse2" aria-expanded="false" aria-controls="faq-collapse2">
+                      <span style="padding-right:20px;">Могу ли я купить билет при входе на концертную площадку?</span>
+                    </button>
+                  </h3>
+                  <div id="faq-collapse2" class="accordion-collapse collapse" aria-labelledby="faq-heading2" data-bs-parent="#accordionFaq" style>
+                    <div class="accordion-body  faq__body"><p>Покупка билетов при входе на концертную площадку возможна в случае, если билеты на концерт не распроданы полностью.</p></div>
+                  </div>
+                </article>
+                <article class="accordion-item  faq__item">
+                  <h3 class="accordion-header  faq__item-title" id="faq-heading3">
+                    <button class="accordion-button collapsed  faq__btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse3" aria-expanded="false" aria-controls="faq-collapse3">
+                      <span style="padding-right:20px;">Как сдать билет?</span>
+                    </button>
+                  </h3>
+                  <div id="faq-collapse3" class="accordion-collapse collapse" aria-labelledby="faq-heading3" data-bs-parent="#accordionFaq">
+                    <div class="accordion-body  faq__body"><p>Курированием процесса возврата билетов занимается конкретный билетный оператор в зависимости от мероприятия. Электронный адрес, на который необходимо подавать запрос, можно найти на приобретенном билете.</p></div>
+                  </div>
+                </article>
+             </div>
+            </div>
+          </div>
+        </section>
         <section class="gallery">
           <div class="container  gallery__text">
             <h2 class="gallery__title">Как это было</h2>
@@ -482,29 +525,52 @@
         <!--DEV
         @ @include('blocks/feedback-form/feedback-form.html')
         -->
-        <article id="feedback" class="container  feedback-form">
-          <div class="feedback-form__inner">
+        <div class="container  feedback-form">
+          <section class="price">
+            <h2 class="price__title">Стоимость участия</h2>
+            <div class="row  price__inner" role="list">
+              <div class="price__col" role="presentation">
+                <p class="price__item" role="listitem">
+                  <span class="price__event-name">ЗАВТРАК</span>
+                  <span class="price__event-date">
+                    <time datetime="2023-05-05 09:30">5 мая</time>
+                    (с <span>9:30</span> до <span>13:00</span>)
+                  </span>
+                  <span class="price__event-price">70&thinsp;€</span>
+                </p>
+              </div>
+              <div class="price__col" role="presentation">
+                <p class="price__item" role="listitem">
+                  <span class="price__event-name">МАСТЕР КЛАСС</span>
+                  <span class="price__event-date">
+                    <time datetime="2023-05-05 09:30">6 мая</time>
+                    (с <span>11:00</span> до <span>14:00</span>)
+                  </span>
+                  <span class="price__event-price">110&thinsp;€</span>
+                </p>
+              </div>
+              <div class="price__col" role="presentation">
+                <p class="price__item" role="listitem">
+                  <span class="price__event-name">ЗАВТРАК + МК</span>
+                  <span class="price__event-date">
+                    <time datetime="2023-05-05">5 мая</time>
+                    и
+                    <time datetime="2023-05-06">6 мая</time>
+                  </span>
+                  <span class="price__event-price">155&thinsp;€</span>
+                </p>
+              </div>
+            </div>
+          </section>
+          <section id="feedback" class="feedback-form__inner">
+            <h2 class="visually-hidden">Заказать обратный звонок</h2>
             <div class="feedback-form__row">
               <div class="feedback-form__info-col">
                 <div class="feedback-form__info">
-                  <h2 class="feedback-form__title">Заказать обратный звонок</h2>
-                  <section>
-                    <h3 class="feedback-form__subtitle">Стоимость участия:</h3>
-                    <ul class="list-nostyled  feedback-form__price">
-                      <li class="feedback-form__item">
-                        5 мая ЗАВТРАК (с 9:30 до 13:00)
-                        <span class="feedback-form__badge">70&thinsp;€</span>
-                      </li>
-                      <li class="feedback-form__item">
-                        5 мая ЗАВТРАК (с 9:30 до 13:00)
-                        <span class="feedback-form__badge">110&thinsp;€</span>
-                      </li>
-                      <li class="feedback-form__item">
-                        5 мая ЗАВТРАК (с 9:30 до 13:00)
-                        <span class="feedback-form__badge">155&thinsp;€</span>
-                      </li>
-                    </ul>
-                  </section>
+                  <p class="h2 feedback-form__title">Важно!</p>
+                  <p>Места ограниченны.</p>
+                  <p>Вход по списку. Бронирование мест по 100% предоплате.</p>
+                  <p>Чтобы забронировать участие в Бизнес-завтраке "Woman Can Do All", необходимо заполнить форму и мы связемся с Вами в ближайшее время.</p>
                 </div>
               </div>
               <div class="feedback-form__form-col">
@@ -519,12 +585,6 @@
                     <span class="field-text__input-wrap">
                       <input class="field-text__input" type="tel" id="af_tel" name="tel" value placeholder="Телефон" required>
                       <!-- <span class="field-text__help-text error error_tel">[[!+fi.error.tel]]</span> -->
-                    </span>
-                  </label>
-                  <label class="field-text">
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="email" id="af_email" name="email" value placeholder="E-mail" required>
-                      <!-- <span class="field-text__help-text error error_email">[[!+fi.error.email]]</span> -->
                     </span>
                   </label>
                   <div class="feedback-form__agreement">
@@ -550,8 +610,8 @@
                 </form>
               </div>
             </div>
-          </div>
-        </article>
+          </section>
+        </div>
       </main>
     </div>
     <div class="page__footer-wrapper">
@@ -599,6 +659,7 @@
           </div>
         </div>
         <section class="copyrights">
+          <h2 class="visually-hidden">Авторские права и информация для пользователя</h2>
           <p class="copyrights__owner">
             <span class="copyrights__text">© Woman Can Do All. All rights reserved. </span>
             <a href="#" class="copyrights__service-link">Terms of use</a>

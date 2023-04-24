@@ -2,14 +2,22 @@
 @ @include('blocks/page-header/page-header.html')
 -->
 
-<header class="container  page-header">
+<header class="container  page-header  page-header--sticky">
   <div class="page-header__inner">
-    <a href="index.html" class="logo" title="Woman Can Do All">
-      <img src="img/woman-cad-logo.svg" alt="Woman Can Do All logo" width="254" height="128">
-    </a>
+
+    <div class="page-header__logo-wrapper">
+      <a href="index.html" class="logo" title="Woman Can Do All">
+        <img src="img/woman-cad-logo.svg" alt="Woman Can Do All logo" width="254" height="128">
+      </a>
+
+      <span class="page-header__slogan">Это женская территория</span>
+    </div>
 
     <div class="page-header__service">
-      <a href="tel:+35799751875" class="page-header__link"><span>+357 99 751875</span></a>
+      <!-- <a href="tel:+35799751875" class="page-header__link"><span>+357 99 751875</span></a> -->
+      <a href="#feedback" class="btn  btn--cta  page-header__btn" data-scroll-link>
+        <span>Заказать обратный звонок</span>
+      </a>
 
       <div class="dropdown  lang-switcher">
         <button class="btn  btn--icon  btn--outline" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,5" title="Вибір мови">
@@ -24,6 +32,5 @@
 
     </div>
 
-    <a href="#feedback" class="btn  btn--cta" data-scroll-link><span>Записаться</span></a>
   </div>
 </header>

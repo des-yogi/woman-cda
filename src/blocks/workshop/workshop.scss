@@ -11,39 +11,44 @@
 
   &__inner {
 
-    @media (min-width: $screen-xl) {
-      align-items: center;
-    }
+    // @media (min-width: $screen-xl) {
+    //   align-items: center;
+    // }
   }
 
   &__star-col {
     @include col(xs, 12);
-    @include col(xl, 5);
-    margin-bottom: 24px;
+    @include col(md, 2);
+    //@include col(xl, 5);
 
-    @media (min-width: $screen-xl) {
-      margin-bottom: 0;
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 24px;
     }
+
+    // @media (min-width: $screen-xl) {
+    //   margin-bottom: 0;
+    // }
   }
 
   &__text-col {
     @include col(xs, 12);
-    @include col(xl, 7);
+    @include col(md, 10);
+    @include col(xl, 8);
   }
 
   &__star {
-    width: 270px;
-    height: 270px;
-    margin: 0 auto;
+    width: 95px;
+    height: 95px;
+    //margin: 0 auto;
 
-    @media (min-width: $screen-md) {
-      margin-left: 0;
-    }
+    // @media (min-width: $screen-md) {
+    //   margin-left: 0;
+    // }
 
     @media (min-width: $screen-xl) {
-      width: 486px;
-      height: 486px;
-      margin: auto;
+      width: 180px;
+      height: 180px;
+      //margin: auto;
     }
 
     img {
@@ -52,13 +57,13 @@
     }
   }
 
-  &__text {
+  // &__text {
 
-    @media (min-width: $screen-xl) {
-      padding-top: 40px;
-      padding-bottom: 40px;
-    }
-  }
+  //   @media (min-width: $screen-xl) {
+  //     padding-top: 40px;
+  //     padding-bottom: 40px;
+  //   }
+  // }
 
   &__title {
     margin-top: 0;

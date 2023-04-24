@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', function(){
       if(hash && hash !== '#') {
         e.preventDefault();
         var scroll = window.pageYOffset;
-        var targetTop = getOffsetRect(document.querySelector(hash)).top - 10; // С поправкой в 10px
+        var targetTop = getOffsetRect(document.querySelector(hash)).top - 90; // С поправкой в 10px
         var scrollDiff = (scroll - targetTop) * -1;
         animate({
-          duration: 500,
+          duration: 400,
           timing: function(timeFraction) {
             return Math.pow(timeFraction, 4); // https://learn.javascript.ru/js-animation
           },
