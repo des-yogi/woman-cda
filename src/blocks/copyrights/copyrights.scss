@@ -5,7 +5,7 @@
   font-size: 14px;
   text-align: center;
 
-  @media (min-width: $screen-md) {
+  @media (min-width: $screen-lg) {
     flex-direction: initial;
     align-items: baseline;
     justify-content: space-between;
@@ -18,14 +18,21 @@
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-lg) {
       flex-direction: initial;
+    }
+
+    a + a {
+
+      @media (max-width: $screen-lg - 1) {
+        margin-top: 16px;
+      }
     }
   }
 
   &__text {
 
-    @media (max-width: $screen-md - 1) {
+    @media (max-width: $screen-lg - 1) {
       margin-bottom: 16px;
     }
   }
