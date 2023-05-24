@@ -11,6 +11,11 @@
     @include col(md, 6);
     @include col(xl, 4);
     margin-bottom: 16px;
+
+    &--only {
+      @include col(md, 12);
+      @include col(xl, 12);
+    }
   }
 
   &__title {

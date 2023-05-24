@@ -29,7 +29,8 @@
     "faq": [],
     "price": [],
     "page-404": [],
-    "article": []
+    "article": [],
+    "note": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
