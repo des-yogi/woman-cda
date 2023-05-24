@@ -1,0 +1,93 @@
+.note {
+  padding: 24px 16px;
+  margin-top: 24px;
+  background-color: $block-bg;
+  border-radius: $border-radius--lg;
+
+  @media (max-width: $screen-md - 1) {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  @media (min-width: $screen-md) {
+    padding: 24px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px 0;
+    padding: 24px 16px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: $white;
+    border-radius: $border-radius--lg;
+    border: 2px solid $main-color;
+
+    @media (min-width: $screen-md) {
+      flex-direction: initial;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      align-items: flex-start;
+    }
+  }
+
+  &__col-1 {
+
+    @media (min-width: $screen-md) {
+      flex: 0 0;
+      flex-basis: calc(100% - 24px - 112px);
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 305px;
+    }
+  }
+
+  &__col-2 {
+
+    @media (min-width: $screen-md) {
+      flex: 0 0;
+      flex-basis: calc(100% - 24px - 112px);
+    }
+
+    @media (min-width: $screen-md) and (max-width: $screen-xl - 1) {
+      order: 1;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 590px;
+    }
+  }
+
+  &__col-3 {
+
+    @media (min-width: $screen-md) {
+      flex: 0 0;
+      flex-basis: 112px;
+    }
+
+    img {
+      display: block;
+      width: 112px;
+      height: 112px;
+      margin-left: auto;
+    }
+  }
+
+
+  &__focus {
+    font-weight: 700;
+    text-transform: uppercase;
+
+    span {
+      color: $main-color;
+    }
+  }
+}

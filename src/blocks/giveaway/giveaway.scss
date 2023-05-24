@@ -15,7 +15,7 @@
     @media (min-width: $screen-xl) {
       position: relative;
       z-index: 1;
-      max-width: 50%;
+      max-width: 39%;
       text-align: initial;
     }
   }
@@ -29,6 +29,7 @@
   }
 
   &__img {
+    margin-top: 16px;
     overflow: hidden;
 
     @media (min-width: $screen-xl) {
