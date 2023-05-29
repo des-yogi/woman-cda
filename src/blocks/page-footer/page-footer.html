@@ -17,6 +17,18 @@
 
         <a href="tel:+35799751875" class="page-footer__link"><span>+357 99 751875</span></a>
 
+        <div class="dropdown  lang-switcher">
+          <button class="btn btn--icon btn--outline  page-footer__lang" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,5" title="Вибір мови">
+            <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe"></use></svg>
+            <span style="margin-left: 12px;">Сменить язык</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end  lang-switcher__menu">
+            <li class="lang-switcher__item  active"><a>Рус</a></li>
+            <li class="lang-switcher__item"><a href="#">Укр</a></li>
+            <li class="lang-switcher__item"><a href="#">Англ</a></li>
+          </ul>
+        </div>
+
         @@include('../../blocks/social-links/social-links.html')
       </section>
     </div>

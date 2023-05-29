@@ -6,7 +6,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
+  height: 72px;
   margin: 0;
   padding: 0 1em;
   font-size: 1em;
@@ -61,29 +61,31 @@
     }
   }
 
+  &--pay,
   &--cta {
+    height: 48px;
+    font-size: 16px;
     color: $white;
-    background-color: $main-color;
+
+    @media (min-width: $screen-md) {
+      height: 56px;
+    }
+
+    @media (max-width: $screen-xl - 1) {
+      padding: 0 12px;
+    }
+
+    @media (min-width: $screen-xl) {
+      height: 72px;
+      font-size: inherit;
+    }
   }
 
+  &--pay {
+    background-color: $dark;
+  }
 
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   border: 1px solid $color-main;
-
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     border-color: darken($color-main, 12%);
-  //   }
-
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     border-color: $color-main;
-  //   }
-  // }
+  &--cta {
+    background-color: $main-color;
+  }
 }

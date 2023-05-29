@@ -13,7 +13,7 @@
 
   &__title {
     position: absolute;
-    top: -65px;
+    top: -80px;
     right: 50px;
     transform: rotate(8.6deg);
     margin: 0;
@@ -27,8 +27,8 @@
     border-radius: 12px;
 
     @media (min-width: $screen-md) {
-      top: -37px;
-      right: 10px;
+      top: -30px;
+      right: -10px;
     }
 
     @media (min-width: $screen-xl) {
@@ -72,11 +72,11 @@
     @media (min-width: $screen-xl) {
 
       &:nth-child(1) {
-        order: 0;
+        order: 1;
       }
 
       &:nth-child(2) {
-        order: 1;
+        order: 0;
       }
 
       &:nth-child(3) {
@@ -126,9 +126,10 @@
   }
 
   &__img {
+    position: relative;
     max-width: 360px;
     margin: 0 auto;
-    overflow: hidden;
+    //overflow: hidden;
     background-color: $white;
     border-radius: $border-radius--lg;
 
@@ -143,7 +144,9 @@
 
     img {
       display: block;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
       border-radius: $border-radius--lg;
     }
   }
