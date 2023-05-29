@@ -6,6 +6,22 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  .lang-switcher {
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+
+    .btn {
+      height: 56px;
+    }
+
+    .dropdown-menu {
+      min-width: 199px;
+    }
+  }
+
   &__logo-col {
     @include col(xs, 12);
     @include col(md, 4);
@@ -55,7 +71,7 @@
     text-decoration: none !important;
 
     @media (max-width: $screen-md - 1) {
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
 
     @media (min-width: $screen-md) {
