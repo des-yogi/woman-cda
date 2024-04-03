@@ -7,11 +7,12 @@
 
   .lang-switcher {
 
-    @media (max-width: $screen-md - 1) {
-      display: none;
-    }
+    // @media (max-width: $screen-md - 1) {
+    //   display: none;
+    // }
 
     .btn {
+      min-width: 56px;
 
       @media (min-width: $screen-md) {
         height: 56px;

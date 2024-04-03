@@ -460,7 +460,7 @@ gulp.task('img:opt', function (callback) {
 // Сборка всего новая под gulp 4
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel('sprite:svg', 'sprite:png', 'favicons'),
+  gulp.parallel('sprite:svg', 'sprite:png'),
   gulp.parallel('style', 'style:single', 'js', 'copy:css', 'copy:img', 'copy:js', 'copy:fonts'),
   'html'
 ));
